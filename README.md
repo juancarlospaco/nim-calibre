@@ -32,6 +32,7 @@ client.close()
 - Run `nim doc calibre.nim` for more Docs.
 - Feel free to send more proc with useful Queries.
 - This is a read-only client, database is meant to be written by Calibre.
+- If you have a Calibre database you can run the module as an Example `nim c -r calibre.nim`.
 
 
 # Requisites
