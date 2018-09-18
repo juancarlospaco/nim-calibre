@@ -1,8 +1,8 @@
 import db_sqlite
 
 type Calibre* = object ## Calibre Client (Ported from Python).
- filepath*: string     ## Full path to Calibre database File *.db
- db*: DbConn           ## SQLite Gatabase Connection Instance.
+  filepath*: string    ## Full path to Calibre database File *.db
+  db*: DbConn          ## SQLite Gatabase Connection Instance.
 
 func connect*(this: var Calibre) = this.db = open(this.filepath, nil, nil, nil)
 func close*(this: Calibre) {.inline.} = this.db.close()  # Close the Gatabase.

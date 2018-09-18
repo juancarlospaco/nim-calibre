@@ -1,6 +1,6 @@
 # Nim-Calibre
 
-Calibre eBooks App Database Client for Nim.
+[Calibre](https://calibre-ebook.com) eBooks App Database Client for [Nim](https://nim-lang.org).
 
 ![Books](https://source.unsplash.com/2FGHddOQcSQ/800x401 "Photo by https://unsplash.com/@michael_david_beckwith")
 
@@ -15,7 +15,7 @@ Calibre eBooks App Database Client for Nim.
 ```nim
 import calibre
 
-var client = Calibre(filepath: "/path/to/metadata.db")
+var client = Calibre(filepath: "/path/to/calibre/metadata.db")
 client.connect()
 echo client.get_all()
 echo client.get_tags()
@@ -30,11 +30,18 @@ client.close()
 ```
 
 - Run `nim doc calibre.nim` for more Docs.
-- Feel free to add more proc with useful Queries.
+- Feel free to send more proc with useful Queries.
 - This is a read-only client, database is meant to be written by Calibre.
-- [This code is ported from Python from Biblioteca-Guerrilla.](https://github.com/elKaZe/biblioteca-guerrilla#biblioteca-guerrilla "eBook Web Catalog to embed on network Routers")
 
 
 # Requisites
 
 - None.
+
+
+# Credits
+
+- [**This code is ported from Python from Biblioteca-Guerrilla.**](https://github.com/elKaZe/biblioteca-guerrilla#biblioteca-guerrilla "eBook Web Catalog to embed on network Routers")
+- All credit for the SQL Queries is for Biblioteca-Guerrilla.
+
+See both if you want [calibre.py](https://github.com/elKaZe/biblioteca-guerrilla/blob/master/biblioteca_guerrilla/app/connector/calibre/calibre.py) &DoubleLongLeftRightArrow; [calibre.nim](https://github.com/juancarlospaco/nim-calibre/blob/master/src/calibre.nim)
