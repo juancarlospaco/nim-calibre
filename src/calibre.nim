@@ -4,7 +4,7 @@ type Calibre* = object ## Calibre Client (Ported from Python).
   filepath*: string    ## Full path to Calibre database File *.db
   db*: DbConn          ## SQLite Gatabase Connection Instance.
 
-func connect*(this: var Calibre) = this.db = open(this.filepath, nil, nil, nil)
+func connect*(this: var Calibre) = this.db = open(this.filepath, "", "", "")
 func close*(this: Calibre) {.inline.} = this.db.close()  # Close the Gatabase.
 
 proc get_all*(this: Calibre): seq[Row] =
