@@ -91,7 +91,9 @@ proc get_formats*(this: Calibre, book_id: string): seq[Row] =
   from data
   where book=?""", book_id)
 
-when is_main_module:
+
+runnableExamples:
+  ## Example Calibre Ebooks App, visit https://calibre-ebook.com for more info.
   var client = Calibre(filepath: "metadata.db")
   client.connect()
   echo client.get_all()
